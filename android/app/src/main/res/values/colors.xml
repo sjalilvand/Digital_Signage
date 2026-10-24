@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#000000</color>
+    <color name="accent_teal">#009688</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#BBBBBB</color>
+    <color name="chip_background">#B3000000</color>
+    <color name="error_red">#FF5252</color>
+    <color name="warning_amber">#FFC107</color>
+</resources>

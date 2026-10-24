@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نمایشگر آسانسور</string>
+
+    <!-- صفحه جفت‌سازی (First Run) -->
+    <string name="pairing_title">اتصال به سرور</string>
+    <string name="pairing_instructions">آدرس سرور و کد جفت‌سازی را که از پنل مدیریت دریافت کرده‌اید وارد کنید. پس از اتصال، محتوا به‌صورت خودکار دانلود و آفلاین پخش می‌شود.</string>
+    <string name="server_address">آدرس سرور</string>
+    <string name="server_address_hint">http://192.168.1.10:8080</string>
+    <string name="pairing_code">کد جفت‌سازی</string>
+    <string name="pairing_code_hint">مثال: AB12CD34</string>
+    <string name="connect">اتصال</string>
+    <string name="connecting">در حال اتصال…</string>
+    <string name="pairing_success">اتصال با موفقیت انجام شد</string>
+    <string name="pairing_invalid_code">کد جفت‌سازی نامعتبر است</string>
+    <string name="pairing_invalid_url">آدرس سرور نامعتبر است</string>
+    <string name="pairing_network_error">عدم دسترسی به سرور — شبکه و آدرس را بررسی کنید</string>
+
+    <!-- پخش و وضعیت -->
+    <string name="offline_badge">قطع شبکه — پخش از حافظه محلی</string>
+    <string name="boot_loading">در حال آماده‌سازی…</string>
+    <string name="idle_no_content">محتوایی برای پخش وجود ندارد</string>
+    <string name="downloading_content">در حال دریافت محتوا…</string>
+
+    <!-- سرویس پیش‌زمینه -->
+    <string name="notif_channel">پخش محتوا</string>
+    <string name="notif_title">نمایشگر آسانسور فعال است</string>
+    <string name="notif_text">پخش محتوا از حافظه محلی ادامه دارد</string>
+</resources>

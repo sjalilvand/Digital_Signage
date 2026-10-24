@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  چیدمان اصلی پخش: همه «نمایش‌دهنده‌ها» روی هم در FrameLayout هستند و
+  PlayerController در هر لحظه فقط یکی را visible می‌کند (هرگز صفحه سیاه نمی‌ماند).
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- ویدیو (Media3) -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:surface_type="surface_view"
+        app:use_controller="false" />
+
+    <!-- تصویر -->
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <!-- صدا: لوگو + عنوان ترک -->
+    <LinearLayout
+        android:id="@+id/audio_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/audio_logo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/audio_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- PDF (تصاویر صفحه‌های پیش‌رندرشده) -->
+    <ImageView
+        android:id="@+id/pdf_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <!-- HTML محلی -->
+    <WebView
+        android:id="@+id/html_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- قالب متن: تصویر اختیاری + عنوان + متن -->
+    <FrameLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <ImageView
+                android:id="@+id/text_image"
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- حالت بی‌محتوا: نام دستگاه + پیام -->
+    <TextView
+        android:id="@+id/idle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="32dp"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <!-- بارگذاری اولیه پس از بوت -->
+    <TextView
+        android:id="@+id/boot_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/boot_loading"
+        android:textColor="#AAAAAA"
+        android:textSize="18sp" />
+
+    <!-- نشان وضعیت قطع شبکه (فقط هنگام از دست رفتن شبکه) -->
+    <TextView
+        android:id="@+id/status_overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="12dp"
+        android:background="@color/chip_background"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="6dp"
+        android:text="@string/offline_badge"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</FrameLayout>
