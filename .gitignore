@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+panel/dist/
+*.local
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/*.iml
+android/.idea/
+android/app/release/
+*.keystore
+!android/keystore.properties.example
+
+# Django / runtime
+server/media/
+server/staticfiles/
+server/db.sqlite3
+.env
+
+# Docker volumes
+data/
+backups/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Reports
+*.orig
+coverage/
