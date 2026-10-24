@@ -1,0 +1,99 @@
+/* قالب اطلاعیه — طراحی برای نمایشگر 1080p افقی، فونت سیستم (آفلاین) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+    font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+    color: #f1f5f9;
+    display: flex;
+    align-items: stretch;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 64px 72px;
+    gap: 40px;
+}
+
+.board__header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 2px solid rgba(45, 212, 191, 0.35);
+    padding-bottom: 28px;
+}
+
+.board__logo {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.board__title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #5eead4;
+}
+
+.board__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.board__lead {
+    font-size: 34px;
+    line-height: 1.9;
+    color: #e2e8f0;
+}
+
+.board__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.board__list li {
+    font-size: 28px;
+    color: #cbd5e1;
+    padding-right: 36px;
+    position: relative;
+}
+
+.board__list li::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #2dd4bf;
+}
+
+.board__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
+    padding-top: 24px;
+}
+
+.board__clock {
+    font-size: 40px;
+    font-weight: 700;
+    color: #5eead4;
+    font-variant-numeric: tabular-nums;
+}
+
+.board__brand {
+    font-size: 24px;
+    color: #94a3b8;
+}

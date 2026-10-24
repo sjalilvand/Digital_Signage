@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اطلاعیه نمونه — قالب بسته HTML</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!--
+      قالب بسته HTML سامانه نمایشگرهای آسانسور (نسخه ۱)
+      قواعد مهم (docs/CONTENT_FORMATS.md):
+        ۱) همه مسیرها نسبی هستند
+        ۲) همه منابع (css/js/تصویر/فونت) داخل بسته‌اند — کاملاً آفلاین
+        ۳) فایل شروع باید index.html و در ریشه بسته باشد
+        ۴) این پوشه را ZIP کنید و در پنل (کتابخانه → بارگذاری) بفرستید
+    -->
+    <main class="board">
+        <header class="board__header">
+            <img src="assets/logo.png" alt="لوگو" class="board__logo" />
+            <h1 class="board__title">اطلاعیه مدیریت ساختمان</h1>
+        </header>
+
+        <section class="board__content">
+            <p class="board__lead">
+                این یک <strong>بسته HTML نمونه</strong> برای آزمایش انتشار روی نمایشگرهای آسانسور است.
+                پس از ZIP کردن همین پوشه، از طریق پنل بارگذاری و منتشر کنید.
+            </p>
+            <ul class="board__list">
+                <li>نمایش کاملاً آفلاین از حافظه محلی باکس</li>
+                <li>بدون وابستگی به اینترنت و CDN بیرونی</li>
+                <li>مسیرهای نسبی و منابع داخلی</li>
+                <li>مدت نمایش از تنظیمات آیتم در پنل (پیش‌فرض ۳۰ ثانیه)</li>
+            </ul>
+        </section>
+
+        <footer class="board__footer">
+            <span id="clock" class="board__clock">--:--</span>
+            <span class="board__brand">سامانه مدیریت نمایشگرهای آسانسور</span>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
